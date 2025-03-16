@@ -4,8 +4,7 @@
       "email": "Email of your TooGoodToGo account."
     },
     "session": {},
-    "headers": {
-    },
+    "headers": {},
     "pollingIntervalInMs": 30000,
     "authenticationIntervalInMS": 3600000
   },
@@ -38,6 +37,7 @@
     "showDecrease": false,
     "showDecreaseToZero": false,
     "showIncrease": false,
-    "showIncreaseFromZero": true
+    "showIncreaseFromZero": true,
+    "showPriceChange": false
   }
 }
