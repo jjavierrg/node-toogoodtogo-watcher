@@ -1,0 +1,12 @@
+name: toogoodtogo
+services:
+  toogoodtogo-watcher:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: toogoodtogo-watcher
+    environment:
+      - TZ=Europe/Madrid
+    volumes:
+      - /container-data/toogoodtogo:/home/node/.config/toogoodtogo-watcher-nodejs
+    command: watch
