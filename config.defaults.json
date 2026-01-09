@@ -45,6 +45,7 @@
     "showDecrease": false,
     "showDecreaseToZero": false,
     "showIncrease": false,
-    "showIncreaseFromZero": true
+    "showIncreaseFromZero": true,
+    "showPriceChange": false
   }
 }
