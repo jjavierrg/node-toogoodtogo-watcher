@@ -41,6 +41,35 @@ Options:
   --version  Show version number                                       [boolean]
 ```
 
+## Configuration
+
+### Polling interval with Cron expressions
+
+The application uses cron expressions to define the polling interval. This provides more flexibility than a simple time interval.
+
+The default configuration checks every 15 seconds: `*/15 * * * * *`
+
+You can customize the polling interval by editing the `api.pollingCronExpression` field in your config file:
+
+```json
+{
+  "api": {
+    "pollingCronExpression": "*/15 * * * * *"
+  }
+}
+```
+
+#### Cron expression examples
+
+- `*/15 * * * * *` - Every 15 seconds (default)
+- `*/30 * * * * *` - Every 30 seconds
+- `0 * * * * *` - Every minute
+- `0 */5 * * * *` - Every 5 minutes
+- `0 0 * * * *` - Every hour
+- `0 */15 9-22 * * *` - Every 15 minutes between 9 AM and 10 PM
+
+The cron expression format is: `second minute hour day month day-of-week`
+
 ## Configuring Apprise notifications
 
 [Apprise](https://github.com/caronc/apprise) is software for sending notifications. It supports many services.
