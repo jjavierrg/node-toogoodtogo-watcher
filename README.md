@@ -47,26 +47,26 @@ Options:
 
 The application uses cron expressions to define the polling interval. This provides more flexibility than a simple time interval.
 
-The default configuration checks every 15 seconds: `*/15 * * * * *`
+The default configuration checks every 30 seconds: `*/30 * * * * *`
 
 You can customize the polling interval by editing the `api.pollingCronExpression` field in your config file:
 
 ```json
 {
   "api": {
-    "pollingCronExpression": "*/15 * * * * *"
+    "pollingCronExpression": "*/30 * * * * *"
   }
 }
 ```
 
 #### Cron expression examples
 
-- `*/15 * * * * *` - Every 15 seconds (default)
 - `*/30 * * * * *` - Every 30 seconds
 - `0 * * * * *` - Every minute
 - `0 */5 * * * *` - Every 5 minutes
 - `0 0 * * * *` - Every hour
-- `0 */15 9-22 * * *` - Every 15 minutes between 9 AM and 10 PM
+- `0 */30 9-22 * * *` - Every 30 minutes between 9 AM and 10 PM
+- `0 */5 9-22 * * MON-FRI` - Every 5 minutes between 9 AM and 10 PM on weekdays (Monday to Friday)
 
 The cron expression format is: `second minute hour day month day-of-week`
 
